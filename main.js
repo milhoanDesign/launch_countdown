@@ -1,20 +1,30 @@
-let output = document.querySelector('.output');
-output.innerHTML = '';
 
+document.getElementById('startCountdown').addEventListener('click', function() {
+        let output = document.querySelector('.output');
+        output.innerHTML = '';
+  
 
-let i = 10;
+        let i = 10;
 
-while (i >= 0) {
-  const para = document.createElement('p');
-  if (i === 10) {
-    para.textContent = `Is this working ${i}`;
-  } else if (i === 0) {
-    para.textContent = 'Blast off!';
-  } else {
-    para.textContent = i;
-  }
+        while (i >= 0) {
+        const para = document.createElement('p');
+        if (i === 10) {
+            para.textContent = `Is this working ${i}`;
+        } else if (i === 0) {
+            para.textContent = 'Blast off!';
+        } else {
+            para.textContent = i;
+        }
 
-  output.appendChild(para);
+        output.appendChild(para);
 
-  i--;
-}
+        i--;
+        };
+
+});
+
+document.getElementById('resetCountdown').addEventListener('click', function() {
+    let output = document.querySelector('.output');
+        output.innerHTML = '';
+    }
+); 
